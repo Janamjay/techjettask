@@ -8,6 +8,7 @@ import SigninSection from "./component/signin/SigninSection";
 import MonthlyReward from "./component/monthlyReward/MonthlyReward";
 import EncircleWorld from "./component/encircle/EncircleWorld";
 import GiftCard from "./component/giftCard/GiftCard";
+import Footer from "./component/footer/Footer";
 import "./App.css";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <MonthlyReward />
       <EncircleWorld />
       <GiftCard />
+      <Footer />
     </>
   );
 }
