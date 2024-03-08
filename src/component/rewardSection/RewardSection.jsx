@@ -1,18 +1,18 @@
 import { useState } from "react";
 import border from "/images/border.png";
+import RewardCard from "./RewardCard";
 
 const RewardSection = () => {
   const [upto20, setUpto20] = useState(true);
   const [upto30, setUpto30] = useState(false);
   const [upto50, setUpto50] = useState(false);
   const [above60, setAbove60] = useState(false);
-
   return (
-    <div className="bg-black py-8 flex flex-col items-center">
-      <h3 className="text-4xl text-white text-center font-medium max-w-[90%] mb-6">
+    <div className="bg-black py-[4rem]  flex flex-col gap-1 items-center w-full">
+      <h3 className="text-[40px] text-white text-center w-[582px] font-[400]">
         Our Rewards Discover the Perks
       </h3>
-      <ul className="max-w-[90%] text-[#4F4D65] w-full flex flex-wrap justify-center gap-4 sm:gap-8 text-sm md:text-base">
+      <ul className="w-[672px] flex justify-center mt-[20px] items-center gap-[43px] text-[#4F4D65] font-[600px] text-[20px] ">
         <li
           className={`cursor-pointer ${upto20 ? "text-white" : ""}`}
           onClick={() => {
@@ -23,7 +23,7 @@ const RewardSection = () => {
           }}
         >
           upto 20% off
-          {upto20 && <img src={border} alt="" />}
+          {upto20 ? <img src={border} alt="" /> : ""}
         </li>
         <li
           className={`cursor-pointer ${upto30 ? "text-white" : ""}`}
@@ -35,7 +35,7 @@ const RewardSection = () => {
           }}
         >
           upto 30% off
-          {upto30 && <img src={border} alt="" />}
+          {upto30 ? <img src={border} alt="" /> : ""}
         </li>
         <li
           className={`cursor-pointer ${upto50 ? "text-white" : ""}`}
@@ -47,7 +47,7 @@ const RewardSection = () => {
           }}
         >
           upto 50% off
-          {upto50 && <img src={border} alt="" />}
+          {upto50 ? <img src={border} alt="" /> : ""}
         </li>
         <li
           className={`cursor-pointer ${above60 ? "text-white" : ""}`}
@@ -59,14 +59,37 @@ const RewardSection = () => {
           }}
         >
           60% and above
-          {above60 && <img src={border} alt="" />}
+          {above60 ? <img src={border} alt="" /> : ""}
         </li>
       </ul>
-      <div className="max-w-[90%] w-full flex flex-wrap justify-center mt-8 gap-4 sm:gap-8">
-        {upto20 && <div className="text-white">Content for upto 20% off</div>}
-        {upto30 && <div className="text-white">Content for upto 30% off</div>}
-        {upto50 && <div className="text-white">Content for upto 50% off</div>}
-        {above60 && <div className="text-white">Content for 60% and above</div>}
+      <div className="pt-3">
+        {upto20 && (
+          <div>
+            <RewardCard />
+          </div>
+        )}
+        {upto30 && (
+          <div>
+            <RewardCard />
+          </div>
+        )}
+        {upto50 && (
+          <div>
+            <RewardCard />
+          </div>
+        )}
+        {above60 && (
+          <div>
+            <RewardCard />
+          </div>
+        )}
+      </div>
+      <div className="w-full">
+        <div className="flex justify-center mt-6">
+          <button className="text-base   text-white font-[600] px-10 py-6 border-[1px] rounded-[8px] border-[#4E41A8]">
+            Join Encircle Program
+          </button>
+        </div>
       </div>
     </div>
   );
