@@ -1,0 +1,46 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 25%; /* Set the width of each item */
+}
+
+.carousel-arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.carousel-arrow-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.carousel-arrow-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-prev-btn {
+  float: left;
+}
+
+.carousel-next-btn {
+  float: right;
+}
+
+/* Hide dots */
+.carousel-dots {
+  display: none;
+}
